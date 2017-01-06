@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <img src="https://s-media-cache-ak0.pinimg.com/236x/b4/81/28/b481284c1f0c80b0d999d51112cb550d.jpg" width="80">
+    <h1>Guinea Pigs</h1>
+  </div>
+</div>
+
+<div class="tag">
+  <div class="container">
+    <h2><%= @tag.title %></h2>
+
+    <div class="cards row">
+      <% @destinations.each do |d| %>
+      <div class="card col-xs-4">
+        <%= image_tag d.image %>
+        <h2><%= d.name %></h2>
+        <p><%= d.description %></p>
+        <%= link_to "See more", destination_path(d) %>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

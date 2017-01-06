@@ -1,0 +1,19 @@
+<div class="header">
+  <div class="container">
+    <img src="https://s-media-cache-ak0.pinimg.com/236x/b4/81/28/b481284c1f0c80b0d999d51112cb550d.jpg" width="80">
+    <h1>Guinea Pigs</h1>
+  </div>
+</div>
+
+<div class="destination">
+  <div class="container">
+    <%= image_tag @destination.image %>
+
+    <%= form_for(@destination) do |f| %>
+      <%= f.text_field :name %>
+      <%= f.text_field :description %>
+      <%= f.submit "Update", :class => "btn" %>
+    <% end %> 
+    
+  </div>
+</div> 
